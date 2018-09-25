@@ -25,7 +25,7 @@ public class GeoObject {
     public void setmGeoImageName(int mGeoImageName) {
         this.mGeoImageName = mGeoImageName;
     }
-
+    
     public static final String[] ObjectNames = {
             "Denmark",
             "Canada",

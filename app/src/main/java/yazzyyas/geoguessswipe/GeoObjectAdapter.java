@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class GeoObjectAdapter extends RecyclerView.Adapter<GeoObjectViewHolder> {
@@ -30,7 +32,10 @@ public class GeoObjectAdapter extends RecyclerView.Adapter<GeoObjectViewHolder> 
         final GeoObject geoObject = listGeoObject.get(position);
         // The holder argument is used to reference the views inside the viewHolder
         // Populate the views with the data from the list
-        holder.geoImage.setImageResource(geoObject.getmGeoImageName());
+
+        Glide.with(context)
+                .load(geoObject.getmGeoImageName())
+                .into(holder.geoImage);
     }
 
     @Override
