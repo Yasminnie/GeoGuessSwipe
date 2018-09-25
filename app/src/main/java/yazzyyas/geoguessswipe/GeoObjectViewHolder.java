@@ -13,7 +13,7 @@ public class GeoObjectViewHolder extends RecyclerView.ViewHolder {
 
     public GeoObjectViewHolder(View itemView) {
         super(itemView);
-        geoName = itemView.findViewById(R.id.geoTextView);
+//        geoName = itemView.findViewById(R.id.geoTextView);
         geoImage = itemView.findViewById(R.id.geoImageView);
         view = itemView;
     }

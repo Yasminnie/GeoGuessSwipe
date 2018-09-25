@@ -10,22 +10,10 @@ public class GeoObject {
         this.mGeoImageName = mGeoImageName;
     }
 
-    public String getmGeoName() {
-        return mGeoName;
-    }
-
-    public void setmGeoName(String mGeoName) {
-        this.mGeoName = mGeoName;
-    }
-
     public int getmGeoImageName() {
         return mGeoImageName;
     }
 
-    public void setmGeoImageName(int mGeoImageName) {
-        this.mGeoImageName = mGeoImageName;
-    }
-    
     public static final String[] ObjectNames = {
             "Denmark",
             "Canada",
@@ -46,5 +34,9 @@ public class GeoObject {
             R.drawable.img6_yes_poland,
             R.drawable.img7_yes_malta,
             R.drawable.img8_no_thailand
+    };
+
+    public static final boolean[] inEurope = {
+            true, false, false, true, false, true, true, false
     };
 }
