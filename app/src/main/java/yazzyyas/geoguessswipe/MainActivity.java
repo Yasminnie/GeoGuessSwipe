@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.Options;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         goRecyclerView = findViewById(R.id.recyclerView);
 
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, LinearLayoutManager.VERTICAL); //2 cells per row
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false); //2 cells per row
         goRecyclerView.setLayoutManager(mLayoutManager);
 
         goAdapter = new GeoObjectAdapter(this, mGeoObjects);
@@ -64,16 +65,16 @@ and uses callbacks to signal when a user is performing these actions.
                         return false;
                     }
 
-
                     //Called when a user swipes left or right on a ViewHolder
                     @Override
                     public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
                         //Get the index corresponding to the selected position
                         int position = (viewHolder.getAdapterPosition());
                         if (swipeDir == ItemTouchHelper.LEFT) {
-//whatever code you want the swipe to perform
+                            //whatever code you want the swipe to perform
+//
                         }
-                        goAdapter.notifyItemRemoved(position);
+                        goAdapter.notifyItemChanged(position);
                     }
                 };
 
